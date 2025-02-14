@@ -16,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
-          <div className="h-full">{children}</div>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" className="h-screen">
+      <body className={`${inter.className} min-h-screen antialiased`}>
+        <ClerkProvider>{children}</ClerkProvider>
+      </body>
+    </html>
   )
 }
